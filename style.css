@@ -1,182 +1,361 @@
-.cell{
-    
-    margin: 3px;
-}
-.container{
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    grid-template-rows: repeat(21, 76px);
-    
-}
-.cell-a{
-    grid-area: image1;
-    background-image:url(images/ce_logo.png);
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
-    grid-column: 1/5;
-    grid-row: 1/8;
-}
-.cell-b{
-    grid-area: image2;
-    background-image:url(images/ce_image01.png);
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
-    grid-column: 5/6;
-    grid-row: 1/3;
-}
-.cell-c{
-    grid-area: image3;
-    background-image:url(images/ce_image02.png);
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
-    grid-column: 5/6;
-    grid-row: 3/5;
-}
-.cell-d{
-    grid-area: image4;
-    background-image:url(images/ce_image03.png);
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
-    grid-column: 5/6;
-    grid-row: 5/8;
+/* old code (cringe)*/
+
+
+/* @media(min-width: 400px) {
+    .cell {
+        margin: 3px;
+    }
+    .container {
+        display: grid;
+        border: solid gray 20px;
+        grid-template-columns: repeat(5, auto);
+        grid-template-rows: auto;
+        justify-items: stretch;
+    }
+    body {
+        border: solid gray;
+        width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    ul {
+        list-style-type: none;
+        margin: 1;
+        padding: 1;
+        background-color: #333;
+        grid-row: 1/2;
+        grid-column: 1/6;
+    }
+    li {
+        float: left;
+    }
+    li a {
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 3px 3px;
+        text-decoration: none;
+    }
+    .cell-a {
+        grid-area: image1;
+        background-image: url(images/ce_logo.png);
+        grid-column: 1/5;
+        grid-row: 2/5;
+    }
+    .cell-b {
+        grid-area: image2;
+        background-image: url(images/ce_image01.png);
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        grid-column: 5/6;
+        grid-row: 2/3;
+    }
+    .cell-c {
+        grid-area: image3;
+        background-image: url(images/ce_image02.png);
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        grid-column: 5/6;
+        grid-row: 3/4;
+    }
+    .cell-d {
+        grid-area: image4;
+        background-image: url(images/ce_image03.png);
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        grid-column: 5/6;
+        grid-row: 4/5;
+    }
+    .cell-e {
+        grid-area: image5;
+        background-image: url(images/ce_image04.png);
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        grid-column: 1/3;
+        grid-row: 5/6;
+    }
+    .cell-f {
+        grid-area: image6;
+        background-image: url(images/ce_image05.png);
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        grid-column: 3/4;
+        grid-row: 5/6;
+    }
+    .cell-g {
+        grid-area: image7;
+        background-image: url(images/ce_image06.png);
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        grid-column: 4/5;
+        grid-row: 5/6;
+    }
+    .cell-h {
+        grid-area: image8;
+        background-image: url(images/ce_image07.png);
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        grid-column: 5/6;
+        grid-row: 5/6;
+    }
+    .cell-i {
+        grid-area: image9;
+        background-image: url(images/ce_image08.png);
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        grid-column: 1/2;
+        grid-row: 6/8;
+    }
+    .cell-j {
+        grid-area: image10;
+        background-image: url(images/ce_image09.png);
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        grid-column: 2/4;
+        grid-row: 6/7;
+    }
+    .cell-k {
+        grid-area: image11;
+        background-image: url(images/ce_image10.png);
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        grid-column: 4/5;
+        grid-row: 6/7;
+    }
+    .cell-l {
+        grid-area: image12;
+        background-image: url(images/ce_image11.png);
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        grid-column: 5/6;
+        grid-row: 6/7;
+    }
+    .cell-m {
+        grid-area: image13;
+        background-image: url(images/ce_image12.png);
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        grid-column: 1/2;
+        grid-row: 8/9;
+    }
+    .cell-n {
+        grid-area: image14;
+        background-image: url(images/ce_image13.png);
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        grid-column: 2/3;
+        grid-row: 7/9;
+    }
+    .cell-o {
+        grid-area: image15;
+        background-image: url(images/ce_image14.png);
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        grid-column: 3/5;
+        grid-row: 7/8;
+    }
+    .cell-p {
+        grid-area: image16;
+        background-image: url(images/ce_image15.png);
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        grid-column: 5/6;
+        grid-row: 7/8;
+    }
+    .cell-q {
+        grid-area: image17;
+        background-image: url(images/ce_image16.png);
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        grid-column: 3/4;
+        grid-row: 8/9;
+    }
+    .cell-r {
+        grid-area: image18;
+        background-image: url(images/ce_image17.png);
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        grid-column: 4/5;
+        grid-row: 8/9;
+    }
+    .cell-s {
+        grid-area: image19;
+        background-image: url(images/ce_image18.png);
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        grid-column: 5/6;
+        grid-row: 8/9;
+    }
+    .cell-t {
+        grid-area: image20;
+        background-image: url(images/ce_image19.png);
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        grid-column: 1/2;
+        grid-row: 9/10;
+    }
+    .cell-u {
+        grid-area: image21;
+        background-image: url(images/ce_image20.png);
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        grid-column: 2/4;
+        grid-row: 9/10;
+    }
+    .cell-v {
+        grid-area: text;
+        grid-column: 5/6;
+        grid-row: 9/10;
+    }
 }
 
-.cell-e{
-    grid-area: image5;
-    background-image:url(images/ce_image04.png);
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
-    grid-column: 1/3;
-    grid-row: 8/12;
-}
+@media (max-width:400px) {}
 
-.cell-f{
-    grid-area: image6;
-    background-image:url(images/ce_image05.png);
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
-    grid-column: 3/4;
-    grid-row: 8/12;
-}
+*/
 
-.cell-g{
-    grid-area: image7;
-    background-image:url(images/ce_image06.png);
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
-    grid-column: 4/5;
-    grid-row: 8/12;
-}
-.cell-h{
-    grid-area: image8;
-    background-image:url(images/ce_image07.png);
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
-    grid-column: 5/6;
-    grid-row: 8/12;
-}
 
-.cell-i{
-    grid-area: image9;
-    background-image:url(images/ce_image08.png);
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
-    grid-column: 1/2;
-    grid-row: 12/18;
-}
-.cell-j{
-    grid-area: image10;
-    background-image:url(images/ce_image09.png);
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
-    grid-column: 2/4;
-    grid-row: 12/15;
-}
-.cell-k{
-    grid-area: image11;
-    background-image:url(images/ce_image10.png);
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
-    grid-column: 4/5;
-    grid-row: 12/15;
-}
-.cell-l{
-    grid-area: image12;
-    background-image:url(images/ce_image11.png);
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
-    grid-column: 5/6;
-    grid-row: 12/15;
-}
-.cell-m{
-    grid-area: image13;
-    background-image:url(images/ce_image12.png);
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
-    grid-column: 1/2;
-    grid-row: 18/19;
-}
-.cell-n{
-    grid-area: image14;
-    background-image:url(images/ce_image13.png);
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
-    grid-column: 2/3;
-    grid-row: 15/19;
-}
-.cell-o{
-    grid-area: image15;
-    background-image:url(images/ce_image14.png);
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
-    grid-column: 3/5;
-    grid-row: 15/17;
-}
-.cell-p{
-    grid-area: image16;
-    background-image:url(images/ce_image15.png);
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
-    grid-column: 5/6;
-    grid-row: 15/17;
-}
-.cell-q{
-    grid-area: image17;
-    background-image:url(images/ce_image16.png);
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
-    grid-column: 3/4;
-    grid-row: 17/19;
-}
-.cell-r{
-    grid-area: image18;
-    background-image:url(images/ce_image17.png);
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
-    grid-column: 4/5;
-    grid-row: 17/19;
-}
-.cell-s{
-    grid-area: image19;
-    background-image:url(images/ce_image18.png);
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
-    grid-column: 5/6;
-    grid-row: 17/19;
-}
-.cell-t{
-    grid-area: image20;
-    background-image:url(images/ce_image19.png);
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
-    grid-column: 1/2;
-    grid-row: 19/21;
-}
-.cell-u{
-    grid-area: image21;
-    background-image:url(images/ce_image20.png);
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
-    grid-column: 2/4;
-    grid-row: 19/21;
+/*actaul code*/
+
+@media(min-width: 400px) {
+    img {
+        width: 100%;
+        height: auto;
+    }
+    ul {
+        list-style-type: none;
+        background-color: rgb(201, 149, 143);
+        grid-row: 1/2;
+        grid-column: 1/6;
+    }
+    li {
+        float: left;
+    }
+    li a {
+        display: block;
+        color: black;
+        text-align: center;
+        margin-left: 20px;
+        margin-right: 20px;
+        padding: 3px 3px;
+        text-decoration: none;
+    }
+    .cell {
+        margin: 3px;
+    }
+    .container {
+        display: grid;
+        grid-template-columns: repeat(5, auto);
+        grid-template-rows: auto;
+        border: solid gray 15px;
+    }
+    .logo {
+        grid-area: image1;
+        grid-column: 1/5;
+        grid-row: 2/5;
+    }
+    .facebook {
+        grid-area: image2;
+        grid-column: 5/6;
+        grid-row: 2/3;
+    }
+    .twitter {
+        grid-area: image3;
+        grid-column: 5/6;
+        grid-row: 3/4;
+    }
+    .masks {
+        grid-area: image4;
+        grid-column: 5/6;
+        grid-row: 4/5;
+    }
+    .birthday {
+        grid-area: image5;
+        grid-column: 1/3;
+        grid-row: 5/6;
+    }
+    .society {
+        grid-area: image6;
+        grid-column: 3/4;
+        grid-row: 5/6;
+    }
+    .rainbowHat {
+        grid-area: image7;
+        grid-column: 4/5;
+        grid-row: 5/6;
+    }
+    .pink {
+        grid-area: image8;
+        grid-column: 5/6;
+        grid-row: 5/6;
+    }
+    .musical {
+        grid-area: image9;
+        grid-column: 1/2;
+        grid-row: 6/8;
+    }
+    .super {
+        grid-area: image10;
+        grid-column: 2/4;
+        grid-row: 6/7;
+    }
+    .candy {
+        grid-area: image11;
+        grid-column: 4/5;
+        grid-row: 6/7;
+    }
+    .otherhat {
+        grid-area: image12;
+        grid-column: 5/6;
+        grid-row: 6/7;
+    }
+    .props {
+        grid-area: image13;
+        grid-column: 1/2;
+        grid-row: 8/9;
+    }
+    .santa {
+        grid-area: image14;
+        grid-column: 2/3;
+        grid-row: 7/9;
+    }
+    .classic {
+        grid-area: image15;
+        grid-column: 3/5;
+        grid-row: 7/8;
+    }
+    .shipping {
+        grid-area: image16;
+        grid-column: 5/6;
+        grid-row: 7/8;
+    }
+    .threeKids {
+        grid-area: image17;
+        grid-column: 3/4;
+        grid-row: 8/9;
+    }
+    .threeKids2 {
+        grid-area: image18;
+        grid-column: 4/5;
+        grid-row: 8/9;
+    }
+    .ohmy {
+        grid-area: image19;
+        grid-column: 5/6;
+        grid-row: 8/9;
+    }
+    .bottomMask {
+        grid-area: image20;
+        grid-column: 1/2;
+        grid-row: 9/10;
+    }
+    .bottomMask2 {
+        grid-area: image21;
+        grid-column: 2/4;
+        grid-row: 9/10;
+    }
+    .text {
+        grid-area: text;
+        grid-column: 5/6;
+        grid-row: 9/10;
+    }
 }
